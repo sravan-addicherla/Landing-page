@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar" class="sidebar-active">
+            <div class="side-cont">
+                <img width="60px" height="60px" src="profile2.png">
+            </div>
+            <div class="side-cont"><a href="">Home</a></div>
+            <div class="side-cont"><a href="">Portfolio</a></div>
+            <div class="side-cont"><a href="">Blog</a></div>
+            <div class="side-cont"><a href="">About Me</a></div>
+
+        </div>
+        <div id="container-main" class="container-main-active">
+            <div class="nav">
+                <div id="nav_bars" onclick="activate()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h1>My Landing Page</h1>
+                <p>It is the wonderful way to explore and interact!!</p>
+                <button id="signup">Sign Up</button>
+            </div>
+            <div class="text">
+                <h3>What is this landing page about?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco a laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industry for previewing layouts and visual mockups.</p>
+                <h3>Tell Me More</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco a laboris nisi ut aliquip ex ea commodo consequat.Duis
+                    aute irure dolor in reprehenderit in volu velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <h3>Benefits</h3>
+                <ul>
+                    <li>landing info</li>
+                    <li>landing spec</li>
+                    <li>landing feat</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco a laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in volup velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup">
+        <h3>Sign Up</h3>
+        <p>Register using email</p>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Enter your name">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter your email">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter your password">
+        <label for="confirm">Name</label>
+        <input type="password" name="confirm" placeholder="Enter your password">
+        <p id="close">X</p>
+        <button>Submit</button>
+    </div>
+
+    <script>
+        document.getElementById("signup").addEventListener("click", function() {
+            document.getElementById("popup").style.visibility = "visible";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        });
+        document.getElementById("close").addEventListener("click", function() {
+            document.getElementById("popup").style.visibility = 'hidden';
+            document.body.style.backgroundColor = "white";
+        });
+        var sid = document.getElementById("sidebar").classList;
+        var main = document.getElementById("container-main").classList;
+
+        function activate() {
+            sid.toggle("sidebar-active");
+            main.toggle("container-main-active");
+        }
+    </script>
+</body>
+
+</html>
